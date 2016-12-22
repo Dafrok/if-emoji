@@ -1,0 +1,30 @@
+{
+  "name": "if-emoji",
+  "version": "0.0.1",
+  "description": "Check your browser if it supports emoji.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dafrok/if-emoji.git"
+  },
+  "keywords": [
+    "check",
+    "if",
+    "emoji",
+    "support"
+  ],
+  "author": "Dafrok <o.o@mug.dog>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dafrok/if-emoji/issues"
+  },
+  "homepage": "https://github.com/Dafrok/if-emoji#readme",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "rollup": "^0.36.4",
+    "rollup-plugin-babel": "^2.7.1"
+  }
+}
