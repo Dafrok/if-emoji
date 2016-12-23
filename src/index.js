@@ -1,16 +1,28 @@
-export default function () {
-  try {
-    const $node = document.createElement('span')
-    $node.innerText = '🐸'
-    $node.style.display = 'inline-block'
-    $node.style.fontSize = '14px'
-    $node.style.position = 'fixed'
-    $node.style.top = '-9999px'
-    document.body.appendChild($node)
-    const style = getComputedStyle($node)
-    document.body.removeChild($node)
-    return (style.width !== '0px' && style.width !== 'auto')
-  } catch (e) {
-    return false
-  }
+const getTextFeature = (text, color) => {
+  const canvas = document.createElement('canvas')
+  canvas.width = 1
+  canvas.height = 1
+  document.body.appendChild(canvas)
+
+  const ctx = canvas.getContext('2d')
+  ctx.textBaseline = 'top';
+  ctx.font = '100px Arial';
+  ctx.fillStyle = color;
+  ctx.scale(0.01, 0.01);
+  ctx.fillText(text, 0, 0);
+
+  const feature = ctx.getImageData(0, 0, 1, 1).data
+  return feature
+}
+
+const compareFeatures = (feature1, feature2) => {
+  const feature1Str = feature1.toString()
+  const feature2Str = feature2.toString()
+  return feature1Str === feature2Str && feature1Str !== '0,0,0,0'
+}
+
+export default function (text) {
+  const feature1 = getTextFeature(text, '#000')
+  const feature2 = getTextFeature(text, '#fff')
+  return compareFeatures(feature1, feature2)
 }

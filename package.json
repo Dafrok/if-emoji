@@ -1,10 +1,10 @@
 {
   "name": "if-emoji",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Check your browser if it supports emoji.",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rm -rf ./index.js && rollup -c"
   },
   "repository": {
     "type": "git",
