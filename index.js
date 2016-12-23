@@ -4,6 +4,10 @@
   (global.ifEmoji = factory());
 }(this, (function () { 'use strict';
 
+var _ArrayLikeToString = function _ArrayLikeToString(arg) {
+  return Array.prototype.toString.call(arg);
+};
+
 var getTextFeature = function getTextFeature(text, color) {
   try {
     var canvas = document.createElement('canvas');
@@ -24,8 +28,8 @@ var getTextFeature = function getTextFeature(text, color) {
 };
 
 var compareFeatures = function compareFeatures(feature1, feature2) {
-  var feature1Str = feature1.toString();
-  var feature2Str = feature2.toString();
+  var feature1Str = _ArrayLikeToString(feature1);
+  var feature2Str = _ArrayLikeToString(feature2);
   return feature1Str === feature2Str && feature1Str !== '0,0,0,0';
 };
 
