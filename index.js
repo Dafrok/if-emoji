@@ -5,20 +5,23 @@
 }(this, (function () { 'use strict';
 
 var getTextFeature = function getTextFeature(text, color) {
-  var canvas = document.createElement('canvas');
-  canvas.width = 1;
-  canvas.height = 1;
-  document.body.appendChild(canvas);
+  try {
+    var canvas = document.createElement('canvas');
+    canvas.width = 1;
+    canvas.height = 1;
 
-  var ctx = canvas.getContext('2d');
-  ctx.textBaseline = 'top';
-  ctx.font = '100px Arial';
-  ctx.fillStyle = color;
-  ctx.scale(0.01, 0.01);
-  ctx.fillText(text, 0, 0);
+    var ctx = canvas.getContext('2d');
+    ctx.textBaseline = 'top';
+    ctx.font = '100px Arial';
+    ctx.fillStyle = color;
+    ctx.scale(0.01, 0.01);
+    ctx.fillText(text, 0, 0);
 
-  var feature = ctx.getImageData(0, 0, 1, 1).data;
-  return feature;
+    var feature = ctx.getImageData(0, 0, 1, 1).data;
+    return feature;
+  } catch (e) {
+    return false;
+  }
 };
 
 var compareFeatures = function compareFeatures(feature1, feature2) {

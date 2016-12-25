@@ -1,6 +1,6 @@
 {
   "name": "if-emoji",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Check a character if it is an accurately supported emoji.",
   "main": "index.js",
   "scripts": {
