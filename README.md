@@ -1,6 +1,6 @@
 # if-emoji
 
-Check a character if it is an correctly supported emoji.
+Check a character if it is a correctly supported emoji.
 
 ## Install
 

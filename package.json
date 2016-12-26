@@ -1,7 +1,7 @@
 {
   "name": "if-emoji",
-  "version": "0.0.6",
-  "description": "Check a character if it is an correctly supported emoji.",
+  "version": "0.0.7",
+  "description": "Check a character if it is a correctly supported emoji.",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf ./index.js && rollup -c"
@@ -11,6 +11,7 @@
     "url": "git+https://github.com/Dafrok/if-emoji.git"
   },
   "keywords": [
+    "if-emoji",
     "check",
     "if",
     "emoji",
