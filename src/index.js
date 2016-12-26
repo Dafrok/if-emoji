@@ -11,12 +11,10 @@ const getTextFeature = (text, color) => {
     ctx.scale(0.01, 0.01);
     ctx.fillText(text, 0, 0);
 
-    const feature = ctx.getImageData(0, 0, 1, 1).data
-    return feature
+    return ctx.getImageData(0, 0, 1, 1).data
   } catch (e) {
     return false
   }
-
 }
 
 const compareFeatures = (feature1, feature2) => {
@@ -28,5 +26,5 @@ const compareFeatures = (feature1, feature2) => {
 export default function (text) {
   const feature1 = getTextFeature(text, '#000')
   const feature2 = getTextFeature(text, '#fff')
-  return compareFeatures(feature1, feature2)
+  return feature1 && feature2 && compareFeatures(feature1, feature2)
 }
