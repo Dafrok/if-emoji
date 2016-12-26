@@ -6,7 +6,7 @@ const getTextFeature = (text, color) => {
 
     const ctx = canvas.getContext('2d')
     ctx.textBaseline = 'top';
-    ctx.font = '100px Arial';
+    ctx.font = '100px -no-font-family-here-';
     ctx.fillStyle = color;
     ctx.scale(0.01, 0.01);
     ctx.fillText(text, 0, 0);
