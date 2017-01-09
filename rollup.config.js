@@ -6,6 +6,9 @@ export default {
     format: 'umd',
     moduleName: 'ifEmoji',
     plugins: [
-        babel({presets: ['es2015-rollup']})
+        babel({
+            presets: [['es2015', { "modules": false }]],
+            plugins: ["external-helpers"]
+        })
     ]
 }
