@@ -1,4 +1,4 @@
-const _ArrayLikeToString = arg => Array.prototype.toString.call(arg)
+const ArrayLikeToString = arg => Array.prototype.toString.call(arg)
 
 const getTextFeature = (text, color) => {
   try {
@@ -20,8 +20,8 @@ const getTextFeature = (text, color) => {
 }
 
 const compareFeatures = (feature1, feature2) => {
-  const feature1Str = _ArrayLikeToString(feature1)
-  const feature2Str = _ArrayLikeToString(feature2)
+  const feature1Str = ArrayLikeToString(feature1)
+  const feature2Str = ArrayLikeToString(feature2)
   return feature1Str === feature2Str && feature1Str !== '0,0,0,0'
 }
 
