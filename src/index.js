@@ -7,11 +7,11 @@ const getTextFeature = (text, color) => {
     canvas.height = 1
 
     const ctx = canvas.getContext('2d')
-    ctx.textBaseline = 'top';
-    ctx.font = '100px -no-font-family-here-';
-    ctx.fillStyle = color;
-    ctx.scale(0.01, 0.01);
-    ctx.fillText(text, 0, 0);
+    ctx.textBaseline = 'top'
+    ctx.font = '100px -no-font-family-here-'
+    ctx.fillStyle = color
+    ctx.scale(0.01, 0.01)
+    ctx.fillText(text, 0, 0)
 
     return ctx.getImageData(0, 0, 1, 1).data
   } catch (e) {
