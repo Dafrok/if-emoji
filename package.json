@@ -3,6 +3,7 @@
   "version": "0.0.10",
   "description": "Check a character if it is a correctly supported emoji.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "karma start",
     "build": "rm -rf ./index.js && rollup -c"
@@ -19,6 +20,9 @@
     "support"
   ],
   "author": "Dafrok <o.o@mug.dog>",
+  "contributors": [
+    "Evan Hahn <me@evanhahn.com> (https://evanhahn.com)"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Dafrok/if-emoji/issues"
